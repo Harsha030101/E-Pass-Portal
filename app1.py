@@ -2,8 +2,8 @@ import requests
 from flask import Flask,render_template,request
 from twilio.rest import Client
 
-account_id = "AC6b02d23e6ede4a766ab2ed96c022daa3"
-auth_token = "06ee0477957cd446d8231792fbc93a67"
+account_id = "AC6b02d23e6ede4a766ab2ed96"
+auth_token = "06ee0477957cd446d8231792fb"
 client = Client(account_id,auth_token)
 
 app = Flask(__name__,static_url_path="/static")
@@ -30,14 +30,14 @@ def registration_details():
         status = "CONFIRMED"
         client.messages\
             .create(to="whatsapp:+91"+phone,
-            from_ = "whatsapp:+14155238886",
+            from_ = "whatsapp:+14155",
             body = "Hello "+name+"! Your Travel From "+src_district+" to "+dest_district+" on "+date+" has been confirmed"
         )
         return render_template("registration_details.html",Name = name,Phone = phone,State = dest_state,Src_Dist = src_district,Dest_Dist = dest_district,Status = status,Date = date,Reason = reason)
     else:
         status = "DECLINED"
         client.messages.create(to="whatsapp:+91"+phone,
-            from_ = "whatsapp:+14155238886",
+            from_ = "whatsapp:+14155",
             body = "Hello "+name+"! Your Travel From "+src_district+" to "+dest_district+" on "+date+" has been declined, Apply later"
         )
         return render_template("registration_details.html",Name = name,Phone = phone,State = dest_state,Src_Dist = src_district,Dest_Dist = dest_district,Status = status,Reason = reason)
