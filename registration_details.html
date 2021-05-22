@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>E-pass portal</title>
+    <style>
+        .bg-black{
+            background-color: black;
+        }
+        .white-text{
+            color: whitesmoke;
+        }
+        #div1{
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+        #div2{
+            height: 70%;
+            width: 60%;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="container" id="div1">
+        <h2 style="color: blue; text-align: center;">REGISTRATION DETAILS</h2>
+    </div>
+    <div class="container" id="div2">
+        <div>
+            <label for="name" class="col-sm-4 white-text">Name: </label>
+            <p class="col-sm-8 white-text" id="name">{{Name}}</p>
+        </div>
+        <div>
+            <label for="phno" class="col-sm-4 white-text">Phone no.: </label>
+            <p class="col-sm-8 white-text" id="phno">{{Phone}}</p>
+        </div>
+        <div>
+            <label for="state" class="col-sm-4 white-text">State: </label>
+            <p class="col-sm-8 white-text" id="state">{{State}}</p>
+        </div>
+        <div>
+            <label for="from" class="col-sm-4 white-text">From: </label>
+            <p class="col-sm-8 white-text" id="from">{{Src_Dist}}</p>
+        </div>
+        <div>
+            <label for="to" class="col-sm-4 white-text">To: </label>
+            <p class="col-sm-8 white-text" id="to">{{Dest_Dist}}</p>
+        </div>
+        <div>
+            <label for="status" class="col-sm-4 white-text">Status: </label>
+            <p class="col-sm-8 white-text" id="status">{{Status}}</p>
+        </div>
+        <div>
+            {% if(Status=="CONFIRMED") %}
+            <label for="date" class="col-sm-4 white-text">Date of Travel: </label>
+            <p class="col-sm-8 white-text" id="date">{{Date}}</p>
+            {% endif %}
+        </div>
+        <div>
+            <label for="reason" class="col-sm-4 white-text">Reason to Travel: </label>
+            <p class="col-sm-8 white-text" id="reason">{{Reason}}</p>
+        </div>
+    </div>
+</body>
+</html>

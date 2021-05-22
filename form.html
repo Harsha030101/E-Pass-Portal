@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>E-pass portal</title>
+    <style>
+        .bg-black{
+            background-color: black;
+        }
+        .white-text{
+            color: whitesmoke;
+        }
+        #div1{
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+        #div2{
+            height: 70%;
+            width: 60%;
+            margin-top: 35px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="container" id="div1">
+        <h1 style="color: blue; text-align: center;">E-PASS PORTAL</h1>
+    </div>
+    <div class="container" id="div2">
+        <form name="registration_form" method="POST" class="form-horizontal" action="/registration_page">
+            <div class="form-group">
+                <label for="name" class="control-label col-sm-4 white-text">Name of Applicant: </label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control bg-black white-text" id="name" name="name" placeholder="Enter Your Name"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mail" class="control-label col-sm-4 white-text">E-mail Address: </label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control bg-black white-text" id="mail" name="mail" placeholder="Enter Your E-mail"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phno" class="control-label col-sm-4 white-text">Contact Number: </label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control bg-black white-text" id="phno" name="phno" placeholder="Enter Phone Number"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="state" class="control-label col-sm-4 white-text">Select Your State: </label>
+                <div class="col-sm-8">
+                    <select class="form-select form-select-sm bg-black white-text" id="state" name="state">
+                        <option selected>Select State</option>
+                        <option value="TS">Telangana</option>
+                        <option value="AP">Andhra Pradesh</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dist" class="control-label col-sm-4 white-text">Select Your District: </label>
+                <div class="col-sm-8">
+                    <select class="form-select form-select-sm bg-black white-text" id="src_dist" name="src_dist">
+                        <option selected>Select District</option>
+                        <option value="Anantapur">Anantapur</option>
+                        <option value="Chittoor">Chittoor</option>
+                        <option value="East Godavari">East Godavari</option>
+                        <option value="Guntur">Guntur</option>
+                        <option value="Krishna">Krishna</option>
+                        <option value="Kurnool">Kurnool</option>
+                        <option value="Prakasam">Prakasam</option>
+                        <option value="S.P.S. Nellore">S.P.S. Nellore</option>
+                        <option value="Srikakulam">Srikakulam</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Vizianagaram">Vizianagaram</option>
+                        <option value="West Godavari">West Godavari</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dist" class="control-label col-sm-4 white-text">Select Where You Want to Travel: </label>
+                <div class="col-sm-8">
+                    <select class="form-select form-select-sm bg-black white-text" id="dest_dist" name="dest_dist">
+                        <option selected>Select District</option>
+                        <option value="Anantapur">Anantapur</option>
+                        <option value="Chittoor">Chittoor</option>
+                        <option value="East Godavari">East Godavari</option>
+                        <option value="Guntur">Guntur</option>
+                        <option value="Krishna">Krishna</option>
+                        <option value="Kurnool">Kurnool</option>
+                        <option value="Prakasam">Prakasam</option>
+                        <option value="S.P.S. Nellore">S.P.S. Nellore</option>
+                        <option value="Srikakulam">Srikakulam</option>
+                        <option value="Visakhapatnam">Visakhapatnam</option>
+                        <option value="Vizianagaram">Vizianagaram</option>
+                        <option value="West Godavari">West Godavari</option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="date" class="control-label col-sm-4 white-text">Date of Travel: </label>
+                <div class="col-sm-8">
+                    <input type="date" class="form-control bg-black white-text" id="date" name="date"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reason" class="control-label col-sm-4 white-text">Reason to Travel: </label>
+                <div class="col-sm-8">
+                    <textarea class="form-control bg-black white-text" id="reason" name="reason" rows="4" cols="50" placeholder="Enter the reason to travel"></textarea>
+                </div>
+            </div>
+            <div class="form-group">        
+                <div class="col-sm-offset-4 col-sm-8">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
